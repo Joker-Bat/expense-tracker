@@ -8,3 +8,7 @@ This is a small project to practice my Javascript
 - Can able to see Income, Expense, Total counts
 - Added a dropdown to select Income, or Expense
 - All transaction details are stored in localStorage
+
+## Live demo
+
+Check the preview here => [ExpenseTracker](https://joker-bat.github.io/expense-tracker/)
