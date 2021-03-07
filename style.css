@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 400;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  font-weight: 600;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inc-exp-container > div {
+  text-align: center;
+  flex: 1;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input:is([type="text"], [type="number"]) {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+input:is([type="text"], [type="number"]):focus {
+  outline: 1px solid #2ecc71;
+}
+
+.btn {
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin: 20px 0 30px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  outline: 1px solid #9c88ff;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+  z-index: 1;
+  user-select: none;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.list li .delete-btn {
+  cursor: pointer;
+  background-color: #c0392b;
+  border: none;
+  padding: 2px 5px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+  transform: translate(-70%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-in;
+}
+
+.list li .delete-btn:active {
+  outline: 0;
+  box-shadow: 0;
+  border: 0;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+  transform: translate(-100%, -50%);
+}
+
+.type {
+  width: 80%;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: var(--box-shadow);
+}
+
+.type:focus {
+  outline: 0;
+}
+
+@media screen and (max-width: 500px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  span,
+  label {
+    user-select: none;
+  }
+}
